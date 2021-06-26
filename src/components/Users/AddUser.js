@@ -3,7 +3,7 @@ import Card from "../UI/Card";
 import Button from "../UI/Button";
 import styles from "./AddUser.module.css";
 
-const AddUser = () => {
+const AddUser = ({ onAddUser }) => {
   const [userName, setUserName] = useState("");
   const [userAge, setUserAge] = useState("");
 
@@ -17,7 +17,7 @@ const AddUser = () => {
       return;
     }
 
-    console.log(userName, userAge);
+    onAddUser({ name: userName, age: userAge, id: Math.random().toString() });
     setUserName("");
     setUserAge("");
   };
