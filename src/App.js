@@ -9,10 +9,10 @@ function App() {
     setUsers((prevState) => [...prevState, newUser]);
   };
   return (
-    <div>
+    <>
       <AddUser onAddUser={addedUserHandler} />
       <UserList users={users} />
-    </div>
+    </>
   );
 }
 
